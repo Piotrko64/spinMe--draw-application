@@ -1,0 +1,9 @@
+.theCanvas {
+    background: rgb(247, 185, 77);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.relative {
+    position: relative;
+}

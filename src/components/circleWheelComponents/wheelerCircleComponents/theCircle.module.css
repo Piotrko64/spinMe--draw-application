@@ -1,0 +1,7 @@
+.circle {
+    aspect-ratio: 1;
+    height: clamp(320px, 34vh, 650px);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+}
