@@ -1,0 +1,19 @@
+.oneChoice {
+    background-color: white;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.dragDots {
+    display: grid;
+    grid-template-columns: 7px 7px;
+    grid-template-rows: 7px 7px 7px;
+    gap: 6px;
+}
+.dot {
+    border-radius: 50%;
+    background-color: rgb(209, 209, 209);
+    height: 7px;
+    width: 7px;
+}
