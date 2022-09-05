@@ -2,4 +2,5 @@
     background: conic-gradient(red 0deg, red 45deg, transparent 45deg, transparent 360deg);
     height: 100%;
     width: 100%;
+    position: absolute;
 }
