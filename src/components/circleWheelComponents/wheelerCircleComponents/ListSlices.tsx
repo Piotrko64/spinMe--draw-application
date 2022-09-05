@@ -15,7 +15,6 @@ export function ListSlices() {
             {correctArraySlices.map(({ color, title }, index) => (
                 <SliceCircle color={color} index={index} angle={correctAngle} key={title} />
             ))}
-            <button onClick={() => changeMode(1)}>aaaaaaaaaaaaaaaaaaaachange Mode on 1</button>
         </>
     );
 }

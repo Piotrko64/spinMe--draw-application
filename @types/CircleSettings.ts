@@ -1,7 +1,9 @@
 export type ModesSlice = 1 | 2 | 3;
+export type OneSlice = { title: string; color: string };
 
 export interface CircleSettings {
     mode: ModesSlice;
-    slices: Array<{ title: string; color: string }>;
+    slices: Array<OneSlice>;
     changeMode: (num: ModesSlice) => void;
+    updateAllSlices: (state: Array<OneSlice>) => void;
 }

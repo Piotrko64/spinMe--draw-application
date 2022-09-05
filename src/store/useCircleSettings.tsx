@@ -1,11 +1,12 @@
 import create from "zustand";
-import { CircleSettings, ModesSlice } from "../../@types/CircleSettings";
+import { CircleSettings, ModesSlice, OneSlice } from "../../@types/CircleSettings";
 
 export const useCircleSettings = create<CircleSettings>((set) => ({
-    mode: 3,
+    mode: 1,
     slices: [
         { title: "banana", color: "red" },
         { title: "strawberry", color: "blue" },
     ],
-    changeMode: (newMode: ModesSlice) => set((state: CircleSettings) => ({ mode: newMode })),
+    changeMode: (newMode: ModesSlice) => set(() => ({ mode: newMode })),
+    updateAllSlices: (newState: Array<OneSlice>) => set(() => ({ slices: newState })),
 }));
