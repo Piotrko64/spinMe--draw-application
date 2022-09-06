@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { BlockPicker, ColorResult } from "react-color";
-import { OneSlice } from "../../../../@types/CircleSettings";
+import { OneSlice } from "../../../@types/CircleSettings";
 import { colorData } from "../../../data/colorData";
 import { useChangeColorSlice } from "../../../hooks/slices/useChangeColorSlice";
 import classes from "./colorInput.module.css";

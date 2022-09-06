@@ -7,7 +7,6 @@ export function TextInputChoice({ id, title }: { id: string; title: string }) {
     const updateText = useChangeTextValueSlice(id);
 
     function handleChangeTitleValue(e: any) {
-        console.log(e.target.value);
         updateText(e.target.value);
     }
 

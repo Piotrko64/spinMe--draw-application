@@ -9,3 +9,8 @@
     padding-left: 5px;
     height: 100%;
 }
+@media (max-width: 750px) {
+    .input {
+        margin: auto 5px;
+    }
+}

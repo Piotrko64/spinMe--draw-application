@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 2px 0px 9px 0px rgb(135 122 91);
 }
 .dragDots {
     display: grid;
@@ -22,4 +21,10 @@
     background-color: rgb(209, 209, 209);
     height: 7px;
     width: 7px;
+}
+@media (max-width: 750px) {
+    .oneChoice {
+        padding: 8px;
+        margin: 8px;
+    }
 }

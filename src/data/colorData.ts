@@ -9,7 +9,7 @@ export const colorData = [
     "#3A67B0",
     "#E6231E",
     "#F5E17F",
-    "#CDA1E7",
+    "#5C6EA1",
     "#F59804",
     "#E4B11F",
     "#42B396",

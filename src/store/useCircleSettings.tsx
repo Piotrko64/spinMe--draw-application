@@ -1,15 +1,16 @@
 import { v4 } from "uuid";
 import create from "zustand";
-import { CircleSettings, ModesSlice, OneSlice } from "../../@types/CircleSettings";
+import { CircleSettings, ModesSlice, OneSlice } from "../@types/CircleSettings";
 
 export const useCircleSettings = create<CircleSettings>((set) => ({
-    mode: 1,
+    mode: 2,
+    currentAngle: 0,
     slices: [
-        { title: "banana", color: "yellow", id: v4() },
-        { title: "strawberry2", color: "red", id: v4() },
-        { title: "strawberry", color: "red", id: v4() },
+        { title: "banana", color: "#F55D3E", id: v4() },
+        { title: "strawberry2", color: "#76BED0", id: v4() },
+        { title: "strawberry", color: "#576CA8", id: v4() },
     ],
     changeMode: (newMode: ModesSlice) => set(() => ({ mode: newMode })),
     updateAllSlices: (newState: Array<OneSlice>) => set(() => ({ slices: newState })),
-    changeById: (newText: string) => set(() => ({})),
+    updateAngle: (angle: number) => set(() => ({ currentAngle: angle })),
 }));

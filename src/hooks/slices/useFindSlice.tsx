@@ -1,4 +1,4 @@
-import { CircleSettings } from "../../../@types/CircleSettings";
+import { CircleSettings } from "../../@types/CircleSettings";
 import { useCircleSettings } from "../../store/useCircleSettings";
 
 export function useFindSlice(id: string) {

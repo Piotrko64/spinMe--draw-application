@@ -1,4 +1,4 @@
-import { randomNumber } from "./randomNumber";
+import { randomNumber } from "../../../utils/randomNumber";
 
 const RGBNUMBERS = "247,205,77";
 

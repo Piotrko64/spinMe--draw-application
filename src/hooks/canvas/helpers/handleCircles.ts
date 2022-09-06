@@ -1,4 +1,4 @@
-import { CircleArrayType } from "./../../../../@types/CircleArrayType";
+import { CircleArrayType } from "../../../@types/CircleArrayType";
 
 export function handleCircles(arrayCircle: CircleArrayType) {
     for (let i = 0; i < arrayCircle.length; i++) {

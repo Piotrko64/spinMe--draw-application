@@ -1,4 +1,4 @@
-import { CircleSettings } from "../../../@types/CircleSettings";
+import { CircleSettings } from "../../@types/CircleSettings";
 import { useCircleSettings } from "../../store/useCircleSettings";
 import { DragDropContext, Draggable, Droppable, DropResult } from "react-beautiful-dnd";
 import { OneChoice } from "./OneChoice";

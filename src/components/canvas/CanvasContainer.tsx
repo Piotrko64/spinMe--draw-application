@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useInitCanvas } from "../../hooks/canvas/useInitCanvas";
 import classes from "./theCanvas.module.css";
-import { ChildrenProps } from "../../../@types/ChildrenProps";
+import { ChildrenProps } from "../../@types/ChildrenProps";
 
 export function CanvasContainer({ children }: ChildrenProps) {
     const canvas = useRef<HTMLCanvasElement | null>(null);

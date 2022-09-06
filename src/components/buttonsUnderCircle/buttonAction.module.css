@@ -1,0 +1,31 @@
+.actionButton {
+    padding: 8px 15px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 28px;
+    color: white;
+    margin: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actionButton:hover {
+    transform: translateY(-5px);
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    align-self: center;
+    transform: translateY(-2px);
+}
+@media (max-width: 750px) {
+    .actionButton {
+        font-size: 22px;
+    }
+}
