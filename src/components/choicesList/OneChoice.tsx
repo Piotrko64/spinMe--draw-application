@@ -1,7 +1,8 @@
+import { ColorsInput } from "./inputsChoices/ColorsInput";
 import { TextInputChoice } from "./inputsChoices/TextInputChoice";
 import classes from "./oneChoice.module.css";
 
-export function OneChoice({ title, id }: { title: string; id: string }) {
+export function OneChoice({ title, id, color }: { title: string; id: string; color: string }) {
     return (
         <div className={classes.oneChoice}>
             <div className={classes.dragDots}>
@@ -11,6 +12,7 @@ export function OneChoice({ title, id }: { title: string; id: string }) {
             </div>
 
             <TextInputChoice id={id} title={title} />
+            <ColorsInput color={color} />
         </div>
     );
 }

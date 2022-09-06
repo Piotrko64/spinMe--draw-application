@@ -2,6 +2,7 @@ import { CircleSettings } from "../../../@types/CircleSettings";
 import { useCircleSettings } from "../../store/useCircleSettings";
 import { DragDropContext, Draggable, Droppable, DropResult } from "react-beautiful-dnd";
 import { OneChoice } from "./OneChoice";
+import classes from "./choicesList.module.css";
 
 export function ChoicesList() {
     const listSlices = useCircleSettings((state: CircleSettings) => state.slices);
@@ -23,13 +24,14 @@ export function ChoicesList() {
                     <div {...provided.droppableProps} ref={provided.innerRef}>
                         {listSlices.map((item, index) => (
                             <Draggable key={item.color} draggableId={item.color} index={index}>
-                                {(provided, snapshot) => (
+                                {(provided) => (
                                     <div
                                         ref={provided.innerRef}
                                         {...provided.draggableProps}
                                         {...provided.dragHandleProps}
+                                        className={classes.drag}
                                     >
-                                        <OneChoice title={item.title} id={item.id} />
+                                        <OneChoice title={item.title} id={item.id} color={item.color} />
                                     </div>
                                 )}
                             </Draggable>
