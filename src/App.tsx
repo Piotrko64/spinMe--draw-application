@@ -3,19 +3,16 @@ import { ActionButtons } from "./components/buttonsUnderCircle/ActionsButton";
 import { CanvasContainer } from "./components/canvas/CanvasContainer";
 import { ChoicesList } from "./components/choicesList/ChoicesList";
 import { CircleWheelEntireComponent } from "./components/circleWheelComponents/CircleWheelEntireComponent";
-import { useCircleSettings } from "./store/useCircleSettings";
-import { ModalWinner } from "./ui/ModalWinner";
+import { ManageModals } from "./components/manageModals/ManageModals";
 
 function App() {
-    const openModalWinner = useCircleSettings((state) => state.activeModal);
-
     return (
         <div className={classes.app}>
             <CanvasContainer>
                 <CircleWheelEntireComponent />
                 <ActionButtons />
                 <ChoicesList />
-                {openModalWinner && <ModalWinner />}
+                <ManageModals />
             </CanvasContainer>
         </div>
     );

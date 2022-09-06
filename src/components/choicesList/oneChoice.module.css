@@ -23,6 +23,7 @@
     width: 7px;
 }
 .buttonDelete {
+    cursor: pointer;
     height: 35px;
     aspect-ratio: 1;
     border-radius: 10px;

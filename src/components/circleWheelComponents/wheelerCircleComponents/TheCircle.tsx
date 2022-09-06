@@ -3,12 +3,14 @@ import { useCircleSettings } from "../../../store/useCircleSettings";
 import { ListSlices } from "./ListSlices";
 import { v4 } from "uuid";
 import classes from "./theCircle.module.css";
+import { useHandleModalWinner } from "../../../hooks/modal/useHandleModalWinner";
 
 export function TheCircle() {
     const actualRotate = useCircleSettings((state) => state.currentAngle);
-
     const listSlices = useCircleSettings((state: CircleSettings) => state.slices);
     const modeSlices = useCircleSettings((state: CircleSettings) => state.mode);
+
+    const { toggleModalActive, changeTitleWinner } = useHandleModalWinner();
 
     const angleForSlice = 360 / (listSlices.length * modeSlices);
     const correctArraySlices = Array(modeSlices)
@@ -28,7 +30,10 @@ export function TheCircle() {
             <div
                 className={classes.circle}
                 style={{ transform: `rotate(${-actualRotate}deg)` }}
-                onTransitionEnd={() => alert(correctArraySlices[findIndexRange].title)}
+                onTransitionEnd={() => {
+                    toggleModalActive();
+                    changeTitleWinner(correctArraySlices[findIndexRange].title);
+                }}
             >
                 <ListSlices correctArray={correctArraySlices} correctAngle={angleForSlice} />
             </div>
