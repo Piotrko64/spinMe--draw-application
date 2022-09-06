@@ -6,6 +6,7 @@ export const useCircleSettings = create<CircleSettings>((set) => ({
     mode: 1,
     slices: [
         { title: "banana", color: "yellow", id: v4() },
+        { title: "strawberry2", color: "red", id: v4() },
         { title: "strawberry", color: "red", id: v4() },
     ],
     changeMode: (newMode: ModesSlice) => set(() => ({ mode: newMode })),

@@ -1,16 +1,18 @@
 .input {
-    height: 25px;
+    height: 35px;
     aspect-ratio: 1;
     border-radius: 10px;
     border: 2px solid rgb(255, 255, 255);
     position: relative;
     cursor: pointer;
     outline: rgb(255, 255, 255);
+    box-shadow: inset 2px 0px 9px 0px rgba(111, 111, 111, 0.53);
 }
 .blockPicker {
     position: absolute;
-    transform: translate(calc(-50% + 10px), 15px);
+    transform: translate(calc(-50% + 20px), 15px);
     z-index: 5;
+    box-shadow: inset 2px 0px 9px 0px rgba(111, 111, 111, 0.53);
 }
 .background {
     height: 100vh;

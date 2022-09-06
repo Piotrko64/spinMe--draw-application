@@ -12,8 +12,8 @@ export function ListSlices() {
 
     return (
         <>
-            {correctArraySlices.map(({ color, title }, index) => (
-                <SliceCircle color={color} index={index} angle={correctAngle} key={title} />
+            {correctArraySlices.map(({ color, title, id }, index) => (
+                <SliceCircle color={color} index={index} angle={correctAngle} key={id} />
             ))}
         </>
     );

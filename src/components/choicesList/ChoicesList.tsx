@@ -18,28 +18,30 @@ export function ChoicesList() {
     }
 
     return (
-        <DragDropContext onDragEnd={updateCorrectArrayToStore}>
-            <Droppable droppableId="droppable">
-                {(provided) => (
-                    <div {...provided.droppableProps} ref={provided.innerRef}>
-                        {listSlices.map((item, index) => (
-                            <Draggable key={item.color} draggableId={item.color} index={index}>
-                                {(provided) => (
-                                    <div
-                                        ref={provided.innerRef}
-                                        {...provided.draggableProps}
-                                        {...provided.dragHandleProps}
-                                        className={classes.drag}
-                                    >
-                                        <OneChoice title={item.title} id={item.id} color={item.color} />
-                                    </div>
-                                )}
-                            </Draggable>
-                        ))}
-                        {provided.placeholder}
-                    </div>
-                )}
-            </Droppable>
-        </DragDropContext>
+        <div className={classes.list}>
+            <DragDropContext onDragEnd={updateCorrectArrayToStore}>
+                <Droppable droppableId="droppable">
+                    {(provided) => (
+                        <div {...provided.droppableProps} ref={provided.innerRef}>
+                            {listSlices.map((item, index) => (
+                                <Draggable key={item.id} draggableId={item.id} index={index}>
+                                    {(provided) => (
+                                        <div
+                                            ref={provided.innerRef}
+                                            {...provided.draggableProps}
+                                            {...provided.dragHandleProps}
+                                            className={classes.drag}
+                                        >
+                                            <OneChoice title={item.title} id={item.id} color={item.color} />
+                                        </div>
+                                    )}
+                                </Draggable>
+                            ))}
+                            {provided.placeholder}
+                        </div>
+                    )}
+                </Droppable>
+            </DragDropContext>
+        </div>
     );
 }

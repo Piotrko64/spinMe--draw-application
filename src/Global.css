@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+    --favColor: #f7b94d;
+}
+
 * {
     font-family: "Lato", sans-serif;
+    outline-color: rgba(207, 173, 121, 0.233);
 }

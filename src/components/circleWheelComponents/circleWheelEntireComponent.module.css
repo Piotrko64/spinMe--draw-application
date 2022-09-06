@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: clamp(400px, 40vh, 750px);
+    height: clamp(320px, 40vh, 750px);
     border: 1px solid red;
     padding: 45px;
     position: relative;

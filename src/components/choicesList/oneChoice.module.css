@@ -1,13 +1,15 @@
 .oneChoice {
     background-color: white;
-    min-width: 320px;
-    max-width: 400px;
+    min-width: 260px;
+    max-width: 800px;
+    width: 40vw;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2px 0px 9px 0px rgb(135 122 91);
 }
 .dragDots {
     display: grid;
