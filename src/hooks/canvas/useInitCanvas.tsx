@@ -1,7 +1,7 @@
-import { randomNumber } from "./helpers/randomNumber";
+import { randomNumber } from "../../utils/randomNumber";
 import { saveCoordinates } from "./helpers/saveCoordinates";
 import { updateCanvasSize } from "./helpers/updateCanvasSize";
-import { CircleArrayType } from "../../../@types/CircleArrayType";
+import { CircleArrayType } from "../../@types/CircleArrayType";
 import { handleCircles } from "./helpers/handleCircles";
 import { newCircle } from "./helpers/newCircle";
 
