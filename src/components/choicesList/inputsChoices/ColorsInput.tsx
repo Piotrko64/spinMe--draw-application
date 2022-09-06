@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
-import { BlockPicker } from "react-color";
+import { BlockPicker, ColorResult } from "react-color";
+import { OneSlice } from "../../../../@types/CircleSettings";
+import { useChangeColorSlice } from "../../../hooks/slices/useChangeColorSlice";
 import classes from "./colorInput.module.css";
 
-export function ColorsInput({ color }: { color: string }) {
+export function ColorsInput({ color, id }: Omit<OneSlice, "title">) {
     const [open, setOpen] = useState(false);
+    const updateColor = useChangeColorSlice(id);
     const input = useRef<HTMLDivElement>(null);
-    console.log(color);
 
     function handleOpenState() {
         setOpen(true);
@@ -16,6 +18,10 @@ export function ColorsInput({ color }: { color: string }) {
         setOpen(false);
     }
 
+    function changeColor(color: ColorResult) {
+        updateColor(color.hex);
+    }
+
     return (
         <>
             <div
@@ -24,8 +30,13 @@ export function ColorsInput({ color }: { color: string }) {
                 onBlur={handleCloseState}
                 tabIndex={0}
                 ref={input}
+                style={{ backgroundColor: color }}
             >
-                <div className={classes.blockPicker}>{open && <BlockPicker color={color} />}</div>
+                <div className={classes.blockPicker}>
+                    {open && (
+                        <BlockPicker color={color} onChangeComplete={changeColor} colors={["red", "green"]} />
+                    )}
+                </div>
             </div>
         </>
     );

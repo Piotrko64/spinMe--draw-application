@@ -12,7 +12,7 @@ export function OneChoice({ title, id, color }: { title: string; id: string; col
             </div>
 
             <TextInputChoice id={id} title={title} />
-            <ColorsInput color={color} />
+            <ColorsInput color={color} id={id} />
         </div>
     );
 }
