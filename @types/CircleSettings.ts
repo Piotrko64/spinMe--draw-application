@@ -1,5 +1,5 @@
 export type ModesSlice = 1 | 2 | 3;
-export type OneSlice = { title: string; color: string };
+export type OneSlice = { title: string; color: string; id: string };
 
 export interface CircleSettings {
     mode: ModesSlice;

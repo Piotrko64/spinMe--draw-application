@@ -29,7 +29,7 @@ export function ChoicesList() {
                                         {...provided.draggableProps}
                                         {...provided.dragHandleProps}
                                     >
-                                        <OneChoice title={item.title} />
+                                        <OneChoice title={item.title} id={item.id} />
                                     </div>
                                 )}
                             </Draggable>
