@@ -10,6 +10,7 @@ import { useAddSlice } from "../../hooks/slices/useAddSlice";
 export function ActionButtons() {
     const updateAngle = useCircleSettings((state) => state.updateAngle);
     const currentAngle = useCircleSettings((state) => state.currentAngle);
+    const listSlice = useCircleSettings((state) => state.slices);
 
     const addSlice = useAddSlice();
 
@@ -22,7 +23,12 @@ export function ActionButtons() {
         <div className={classes.buttons}>
             <ButtonAction title="spin the wheel" color="#EB5C59" icon={circle} action={setRandomAngle} />
             <ButtonAction title="change mode" color="#5C6EA1" icon={setting} action={() => {}} />
-            <ButtonAction title="Add Choice" color="#C69E54" icon={plus} action={addSlice} />
+            <ButtonAction
+                title={listSlice.length > 20 ? "Too much!" : "Add Choice"}
+                color="#C69E54"
+                icon={listSlice.length > 20 ? "" : plus}
+                action={addSlice}
+            />
         </div>
     );
 }

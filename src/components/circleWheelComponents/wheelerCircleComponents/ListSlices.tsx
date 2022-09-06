@@ -1,5 +1,4 @@
-import { CircleSettings, OneSlice } from "../../../@types/CircleSettings";
-import { useCircleSettings } from "../../../store/useCircleSettings";
+import { OneSlice } from "../../../@types/CircleSettings";
 import { SliceCircle } from "./SliceCircle";
 
 export function ListSlices({
@@ -11,7 +10,7 @@ export function ListSlices({
 }) {
     return (
         <div>
-            {correctArray.map(({ color, title, id }, index) => (
+            {correctArray.map(({ color, id }, index) => (
                 <SliceCircle color={color} index={index} angle={correctAngle} key={id} />
             ))}
         </div>

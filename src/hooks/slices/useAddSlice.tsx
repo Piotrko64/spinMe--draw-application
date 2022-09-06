@@ -9,6 +9,7 @@ export function useAddSlice() {
     const listSlices = useCircleSettings((state: CircleSettings) => state.slices);
 
     function addSlice() {
+        if (listSlices.length > 20) return;
         const randomColor = colorData[randomNumber(0, colorData.length - 1)];
 
         updateAllSlices([{ title: "new", color: randomColor, id: v4() }, ...listSlices]);

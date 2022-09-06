@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { BlockPicker, ColorResult } from "react-color";
+import { BlockPicker, ColorResult, TwitterPicker } from "react-color";
 import { OneSlice } from "../../../@types/CircleSettings";
 import { colorData } from "../../../data/colorData";
 import { useChangeColorSlice } from "../../../hooks/slices/useChangeColorSlice";
@@ -25,16 +25,14 @@ export function ColorsInput({ color, id }: Omit<OneSlice, "title">) {
 
     return (
         <>
-            <div
-                className={classes.input}
-                onClick={handleOpenState}
-                onBlur={handleCloseState}
-                tabIndex={0}
-                ref={input}
-                style={{ backgroundColor: color }}
-            >
+            {open && <div className={classes.back} onClick={handleCloseState}></div>}
+            <div className={classes.input} onClick={handleOpenState} style={{ backgroundColor: color }}>
                 <div className={classes.blockPicker}>
-                    {open && <BlockPicker color={color} onChangeComplete={changeColor} colors={colorData} />}
+                    {open && (
+                        <div onBlur={handleCloseState} ref={input}>
+                            <BlockPicker color={color} onChangeComplete={changeColor} colors={colorData} />
+                        </div>
+                    )}
                 </div>
             </div>
         </>
