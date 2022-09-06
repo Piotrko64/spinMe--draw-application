@@ -2,8 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: clamp(320px, 40vh, 750px);
+    height: clamp(270px, 40vw, 350px);
 
-    padding: 45px 0 10px;
+    padding: 45px 0 30px;
     position: relative;
+}
+@media (max-width: 750px) {
+    .container {
+        padding: 30px 0 5px;
+    }
 }
