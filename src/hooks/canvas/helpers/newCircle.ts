@@ -1,14 +1,17 @@
+import { config } from "../../../config";
 import { randomNumber } from "../../../utils/randomNumber";
 
 const RGBNUMBERS = "247,205,77";
 
+const { MIN_SIZE, MAX_SIZE, MIN_SPEED, MAX_SPEED } = config;
+
 export function newCircle(ctx: CanvasRenderingContext2D, coordinateX: number, coordinateY: number) {
-    const speedX = randomNumber(-2, 4);
-    const speedY = randomNumber(-1, 2);
+    const speedX = randomNumber(MIN_SPEED, MAX_SPEED);
+    const speedY = randomNumber(MIN_SPEED, MAX_SPEED);
 
     let xCoordinate = coordinateX;
     let yCoordinate = coordinateY;
-    let size = randomNumber(4, 38);
+    let size = randomNumber(MIN_SIZE, MAX_SIZE);
     let opacity = randomNumber(15, 100) / 100;
 
     return {

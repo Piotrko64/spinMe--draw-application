@@ -4,7 +4,7 @@ import { useFindSlice } from "../../../hooks/slices/useFindSlice";
 import classes from "./textInput.module.css";
 
 export function TextInputChoice({ id }: { id: string }) {
-    const findSlice = useFindSlice(id);
+    const { findSlice } = useFindSlice(id);
     const updateText = useChangeTextValueSlice(id);
 
     function handleChangeTitleValue(event: ChangeEvent<HTMLInputElement>) {
@@ -12,14 +12,12 @@ export function TextInputChoice({ id }: { id: string }) {
     }
 
     return (
-        <>
-            <input
-                value={findSlice!.title}
-                style={{ borderBottomColor: !findSlice!.title.trim() ? "red" : "var(--favColor)" }}
-                onChange={handleChangeTitleValue}
-                className={classes.input}
-                placeholder={"🚨Write something!🚨"}
-            />
-        </>
+        <input
+            value={findSlice!.title}
+            style={{ borderBottomColor: !findSlice?.title.trim() ? "red" : "var(--favColor)" }}
+            onChange={handleChangeTitleValue}
+            className={classes.input}
+            placeholder={"🚨Write something!🚨"}
+        />
     );
 }

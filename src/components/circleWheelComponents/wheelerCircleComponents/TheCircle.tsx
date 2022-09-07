@@ -27,15 +27,17 @@ export function TheCircle() {
 
     const findIndexRange = arrayRange.findIndex((range) => remainderOfDivision <= range);
 
+    function handlerTransitionEnd() {
+        toggleModalActive(true);
+        changeTitleWinner(correctArraySlices[findIndexRange].title);
+    }
+
     return (
         <div className={classes.container}>
             <div
                 className={classes.circle}
                 style={{ transform: `rotate(${-currentAngle}deg)` }}
-                onTransitionEnd={() => {
-                    toggleModalActive(true);
-                    changeTitleWinner(correctArraySlices[findIndexRange].title);
-                }}
+                onTransitionEnd={handlerTransitionEnd}
             >
                 <ListSlices correctArray={correctArraySlices} correctAngle={angleForSlice} />
             </div>
