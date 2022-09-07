@@ -6,5 +6,5 @@ export function updateCanvasSize(canvas: HTMLCanvasElement) {
         return update;
     })();
 
-    window.addEventListener("resize", updateSize());
+    window.addEventListener("resize", updateSize);
 }

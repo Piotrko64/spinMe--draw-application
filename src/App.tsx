@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import classes from "./App.module.css";
 import { ActionButtons } from "./components/buttonsUnderCircle/ActionsButton";
 import { CanvasContainer } from "./components/canvas/CanvasContainer";

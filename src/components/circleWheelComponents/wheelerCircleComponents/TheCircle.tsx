@@ -9,13 +9,17 @@ export function TheCircle() {
 
     const { toggleModalActive, changeTitleWinner } = useHandleModalWinner();
 
-    const angleForSlice = 360 / (slices.length * mode);
+    const correctSlicesLength = slices.filter((slice) => slice.title.trim()).length;
+
+    const angleForSlice = 360 / (correctSlicesLength * mode);
+
     const correctArraySlices = Array(mode)
         .fill(slices)
         .flat()
-        .map((slice) => ({ ...slice, id: v4() }));
+        .map((slice) => ({ ...slice, id: v4() }))
+        .filter((slice) => slice.title.trim());
 
-    const arrayRange = Array(mode * slices.length)
+    const arrayRange = Array(mode * correctSlicesLength)
         .fill(0)
         .map((_el, index) => (index + 1) * angleForSlice);
 

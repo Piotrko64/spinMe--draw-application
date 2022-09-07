@@ -13,7 +13,13 @@ export function TextInputChoice({ id }: { id: string }) {
 
     return (
         <>
-            <input value={findSlice!.title} onChange={handleChangeTitleValue} className={classes.input} />
+            <input
+                value={findSlice!.title}
+                style={{ borderBottomColor: !findSlice!.title.trim() ? "red" : "var(--favColor)" }}
+                onChange={handleChangeTitleValue}
+                className={classes.input}
+                placeholder={"🚨Write something!🚨"}
+            />
         </>
     );
 }

@@ -3,29 +3,30 @@ import { config } from "../../config";
 import { randomNumber } from "../../utils/randomNumber";
 import { useCircleSettings } from "./../../store/useCircleSettings";
 export function useKeyboardToSpin() {
-    const updateAngle = useCircleSettings((state) => state.updateAngle);
-    const currentAngle = useCircleSettings((state) => state.currentAngle);
-    const toggleModalModes = useCircleSettings((state) => state.toggleOpenModalModes);
-    const toggleModalWinner = useCircleSettings((state) => state.toggleOpenModalWinner);
+    const {
+        updateAngle,
+        currentAngle,
+        toggleOpenModalModes,
+        toggleOpenModalWinner,
+        isActiveModalModes,
+        isActiveModalWinner,
+    } = useCircleSettings((state) => state);
 
     function handlePressSpacebar(e: KeyboardEvent) {
-        console.log(e.key);
-        if (e.key === " ") {
+        if (e.key === "Enter") {
             e.preventDefault();
-            toggleModalModes(false);
-            toggleModalWinner(false);
+            toggleOpenModalModes(false);
+            toggleOpenModalWinner(false);
+            if (isActiveModalModes || isActiveModalWinner) {
+                return;
+            }
             const randomAngle = randomNumber(config.MIN_VALUE_SPIN, config.MAX_VALUE_SPIN);
-
             updateAngle(currentAngle + randomAngle);
-        } else if (e.key === "Enter") {
-            e.preventDefault();
-            toggleModalModes(false);
-            toggleModalWinner(false);
         }
     }
 
     useEffect(() => {
         window.addEventListener("keydown", handlePressSpacebar);
         return () => window.removeEventListener("keydown", handlePressSpacebar);
-    }, [currentAngle]);
+    }, [currentAngle, isActiveModalModes, isActiveModalWinner]);
 }
