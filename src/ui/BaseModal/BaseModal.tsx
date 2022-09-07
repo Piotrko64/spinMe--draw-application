@@ -30,10 +30,10 @@ export function BaseModal({ children }: ChildrenProps) {
                             },
                         }}
                         transition={{
-                            duration: 0.22,
+                            duration: 0.12,
                             type: "spring",
-                            damping: 3,
-                            mass: 0.65,
+                            damping: 4,
+                            mass: 0.35,
                             stiffness: 50,
                             delay: 0,
                         }}
