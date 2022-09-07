@@ -28,8 +28,9 @@ export function BaseModal({ children }: ChildrenProps) {
                         delay: 0,
                     }}
                     initial={{ scale: 0 }}
+                    className={classes.modal}
                 >
-                    <div className={classes.modal}>{children}</div>
+                    {children}
                 </motion.div>
             </div>
         </>
