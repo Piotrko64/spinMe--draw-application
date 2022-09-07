@@ -48,6 +48,7 @@ I also love Vite to create quick base template in React-Typescript.
 </div>
 <br/>
 <br/>
+
 # Inspiration
 
 I wanted learn something other than redux toolkit to manage state. I also seldom use HTML Canvas so it was a good opportunity
