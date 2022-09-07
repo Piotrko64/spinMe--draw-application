@@ -32,6 +32,7 @@ learn other manage state library than redux - I choose Zustand!</p>
 - Use **npm run dev** or **yarn dev**
 
 # About 
+<div align="center">
 <p>if you are undecided on what to eat for dinner or you have other small dilemmas, this application is for you</p>
 <img src="https://user-images.githubusercontent.com/77500425/188863110-3403d65c-f81f-400b-a66c-62ba67c9f8a9.png"  align="center" />
 <br/>
@@ -39,7 +40,7 @@ learn other manage state library than redux - I choose Zustand!</p>
 <p> I also first time use Zustand - In my opinion it is awesome that this is so simple state manager</p>
 <img src="https://user-images.githubusercontent.com/77500425/188864436-a0215583-22e1-4055-b334-cb6be49134ea.png"  align="center" />
 I also love Vite to create quick base template in React-Typescript.
-
+</div>
 # Inspiration
 
 I wanted learn something other than redux toolkit to manage state. I also seldom use HTML Canvas so it was a good opportunity
