@@ -18,8 +18,9 @@ export function BaseModal({ children }: ChildrenProps) {
             >
                 <div className={classes.modalBackground}></div>
             </motion.div>
-            <AnimatePresence exitBeforeEnter>
-                <div className={classes.position}>
+
+            <div className={classes.position}>
+                <AnimatePresence exitBeforeEnter>
                     <motion.div
                         animate={{ scale: 1 }}
                         exit={{
@@ -41,8 +42,8 @@ export function BaseModal({ children }: ChildrenProps) {
                     >
                         <div className={classes.modal}>{children}</div>
                     </motion.div>
-                </div>
-            </AnimatePresence>
+                </AnimatePresence>
+            </div>
         </>
     );
 }

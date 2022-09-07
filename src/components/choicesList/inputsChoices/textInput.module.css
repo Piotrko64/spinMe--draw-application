@@ -13,5 +13,6 @@
 @media (max-width: 750px) {
     .input {
         margin: auto 5px;
+        font-size: 18px;
     }
 }

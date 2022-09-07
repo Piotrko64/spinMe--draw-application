@@ -3,7 +3,9 @@
 :root {
     --favColor: #f7b94d;
 }
-
+a {
+    color: white;
+}
 * {
     font-family: "Lato", sans-serif;
     outline-color: rgba(207, 173, 121, 0.233);
