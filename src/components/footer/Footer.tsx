@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className={classes.footer}>
             <a href="https://github.com/Piotrko64" target="_blank">
-                Visit my github for more application
+                Visit my github for more applications
             </a>
         </footer>
     );
