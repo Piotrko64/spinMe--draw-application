@@ -37,6 +37,7 @@ learn other manage state library than redux - I choose Zustand!</p>
 <p> I use HTML Canvas to create more interesting background! Visit this app and move mouse!</p>
 https://spinmeapp.vercel.app
 <br/>
+  <br/>
 <img src="https://user-images.githubusercontent.com/77500425/188863110-3403d65c-f81f-400b-a66c-62ba67c9f8a9.png"  align="center" />
 <br/>
 <br/>
