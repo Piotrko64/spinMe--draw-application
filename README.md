@@ -38,7 +38,7 @@ learn other manage state library than redux - I choose Zustand!</p>
 <br/>
 <img src="https://user-images.githubusercontent.com/77500425/188863110-3403d65c-f81f-400b-a66c-62ba67c9f8a9.png"  align="center" />
 <br/>
-
+<br/>
 <p> I also first time use Zustand - In my opinion it is awesome that this is so simple state manager</p>
 <br/>
 <img src="https://user-images.githubusercontent.com/77500425/188864436-a0215583-22e1-4055-b334-cb6be49134ea.png"  align="center" />
