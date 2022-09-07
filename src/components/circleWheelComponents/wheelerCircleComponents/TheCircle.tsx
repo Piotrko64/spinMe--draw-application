@@ -14,8 +14,9 @@ export function TheCircle() {
 
     const angleForSlice = 360 / (listSlices.length * modeSlices);
     const correctArraySlices = Array(modeSlices)
-        .fill(listSlices.map((slice) => ({ ...slice, id: v4() })))
-        .flat();
+        .fill(listSlices)
+        .flat()
+        .map((slice) => ({ ...slice, id: v4() }));
 
     const arrayRange = Array(modeSlices * listSlices.length)
         .fill(0)

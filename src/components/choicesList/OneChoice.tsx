@@ -15,8 +15,8 @@ export function OneChoice({ title, id, color }: { title: string; id: string; col
     return (
         <div className={classes.oneChoice}>
             <div className={classes.dragDots}>
-                {[...Array(6).keys()].map(() => (
-                    <div className={classes.dot}></div>
+                {[...Array(6).keys()].map((dot) => (
+                    <div className={classes.dot} key={dot}></div>
                 ))}
             </div>
 
