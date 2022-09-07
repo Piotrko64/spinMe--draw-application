@@ -1,10 +1,11 @@
 # spinMe--draw-application
-<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/188860078-43060038-8ff7-475d-8831-04e3a93aec0b.png" height="200"/> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/188861912-fc3bd997-afb0-441b-b164-e4b0409e4241.png" height="200"/> </p>
 
 <br />
 
 <p align="center">Simple application to draw choices in a wheel.This app was created to exercise HTML Canvas and 
 learn other manage state library than redux - I choose Zustand!</p>
+
 
 <div align="center">
 
