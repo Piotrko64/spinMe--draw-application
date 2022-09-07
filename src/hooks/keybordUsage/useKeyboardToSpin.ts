@@ -9,6 +9,7 @@ export function useKeyboardToSpin() {
     const toggleModalWinner = useCircleSettings((state) => state.toggleOpenModalWinner);
 
     function handlePressSpacebar(e: KeyboardEvent) {
+        console.log(e.key);
         if (e.key === " ") {
             e.preventDefault();
             toggleModalModes(false);
@@ -16,6 +17,10 @@ export function useKeyboardToSpin() {
             const randomAngle = randomNumber(config.MIN_VALUE_SPIN, config.MAX_VALUE_SPIN);
 
             updateAngle(currentAngle + randomAngle);
+        } else if (e.key === "Enter") {
+            e.preventDefault();
+            toggleModalModes(false);
+            toggleModalWinner(false);
         }
     }
 

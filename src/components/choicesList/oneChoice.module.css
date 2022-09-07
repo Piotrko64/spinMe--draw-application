@@ -5,7 +5,7 @@
     width: 40vw;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +35,9 @@
     margin-left: 5px;
     border: none;
     font-family: "Bebas Neue", cursive;
+}
+.margin {
+    padding: 5px;
 }
 @media (max-width: 750px) {
     .oneChoice {

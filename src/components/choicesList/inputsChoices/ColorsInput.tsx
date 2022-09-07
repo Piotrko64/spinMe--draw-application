@@ -24,7 +24,7 @@ export function ColorsInput({ color, id }: Omit<OneSlice, "title">) {
     return (
         <>
             {open && <div className={classes.back} onClick={handleCloseState}></div>}
-            <div className={classes.input} onClick={handleOpenState} style={{ backgroundColor: color }}>
+            <button className={classes.input} onClick={handleOpenState} style={{ backgroundColor: color }}>
                 <div className={classes.blockPicker}>
                     {open && (
                         <div onBlur={handleCloseState}>
@@ -32,7 +32,7 @@ export function ColorsInput({ color, id }: Omit<OneSlice, "title">) {
                         </div>
                     )}
                 </div>
-            </div>
+            </button>
         </>
     );
 }
