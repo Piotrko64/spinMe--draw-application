@@ -22,5 +22,5 @@ export function useKeyboardToSpin() {
     useEffect(() => {
         window.addEventListener("keydown", handlePressSpacebar);
         return () => window.removeEventListener("keydown", handlePressSpacebar);
-    }, []);
+    }, [currentAngle]);
 }

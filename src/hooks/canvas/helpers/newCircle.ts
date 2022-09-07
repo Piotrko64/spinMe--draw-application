@@ -8,7 +8,7 @@ export function newCircle(ctx: CanvasRenderingContext2D, coordinateX: number, co
 
     let xCoordinate = coordinateX;
     let yCoordinate = coordinateY;
-    let size = randomNumber(1, 34);
+    let size = randomNumber(4, 38);
     let opacity = randomNumber(15, 100) / 100;
 
     return {
