@@ -1,4 +1,3 @@
-import { randomNumber } from "../../utils/randomNumber";
 import { saveCoordinates } from "./helpers/saveCoordinates";
 import { updateCanvasSize } from "./helpers/updateCanvasSize";
 import { CircleArrayType } from "../../@types/CircleArrayType";

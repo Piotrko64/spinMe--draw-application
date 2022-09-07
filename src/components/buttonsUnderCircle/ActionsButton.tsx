@@ -9,11 +9,8 @@ import { useAddSlice } from "../../hooks/slices/useAddSlice";
 import { config } from "../../config";
 
 export function ActionButtons() {
-    const updateAngle = useCircleSettings((state) => state.updateAngle);
-    const currentAngle = useCircleSettings((state) => state.currentAngle);
-    const listSlice = useCircleSettings((state) => state.slices);
+    const { updateAngle, currentAngle, slices, toggleOpenModalModes } = useCircleSettings((state) => state);
 
-    const toggleOpenModalMode = useCircleSettings((state) => state.toggleOpenModalModes);
     const addSlice = useAddSlice();
 
     function setRandomAngle() {
@@ -22,6 +19,8 @@ export function ActionButtons() {
         updateAngle(currentAngle + randomAngle);
     }
 
+    const isMaxAmount = slices.length >= config.MAX_AMOUNT_SLICE;
+
     return (
         <div className={classes.buttons}>
             <ButtonAction title="spin the wheel" color="#EB5C59" icon={circle} action={setRandomAngle} />
@@ -29,12 +28,12 @@ export function ActionButtons() {
                 title="change mode"
                 color="#5C6EA1"
                 icon={setting}
-                action={() => toggleOpenModalMode(true)}
+                action={() => toggleOpenModalModes(true)}
             />
             <ButtonAction
-                title={listSlice.length >= config.MAX_AMOUNT_SLICE ? "Too much!" : "Add Choice"}
+                title={isMaxAmount ? "Too much!" : "Add Choice"}
                 color="#C69E54"
-                icon={listSlice.length >= config.MAX_AMOUNT_SLICE ? "" : plus}
+                icon={isMaxAmount ? "" : plus}
                 action={addSlice}
             />
         </div>

@@ -3,7 +3,7 @@ import { ColorsInput } from "./inputsChoices/ColorsInput";
 import { TextInputChoice } from "./inputsChoices/TextInputChoice";
 import classes from "./oneChoice.module.css";
 
-export function OneChoice({ title, id, color }: { title: string; id: string; color: string }) {
+export function OneChoice({ id, color }: { id: string; color: string }) {
     const slices = useCircleSettings((state) => state.slices);
     const updateStateSlices = useCircleSettings((state) => state.updateAllSlices);
 
@@ -20,7 +20,7 @@ export function OneChoice({ title, id, color }: { title: string; id: string; col
                 ))}
             </div>
 
-            <TextInputChoice id={id} title={title} />
+            <TextInputChoice id={id} />
             <ColorsInput color={color} id={id} />
             {slices.length > 2 && (
                 <button className={classes.buttonDelete} onClick={deleteSlice}>

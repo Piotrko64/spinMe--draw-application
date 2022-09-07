@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { BlockPicker, ColorResult, TwitterPicker } from "react-color";
+import { useState } from "react";
+import { BlockPicker, ColorResult } from "react-color";
 import { OneSlice } from "../../../@types/CircleSettings";
 import { colorData } from "../../../data/colorData";
 import { useChangeColorSlice } from "../../../hooks/slices/useChangeColorSlice";
