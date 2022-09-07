@@ -3,8 +3,8 @@ import { ModalModes } from "./ModalModes";
 import { ModalWinner } from "./ModalWinner";
 
 export function ManageModals() {
-    const isOpenModalWinner = useCircleSettings((state) => state.activeModalWinner);
-    const isOpenModalModes = useCircleSettings((state) => state.activeModalModes);
+    const isOpenModalWinner = useCircleSettings((state) => state.isActiveModalWinner);
+    const isOpenModalModes = useCircleSettings((state) => state.isActiveModalModes);
     return (
         <>
             {isOpenModalWinner && <ModalWinner />}

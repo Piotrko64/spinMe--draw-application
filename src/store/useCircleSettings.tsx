@@ -5,8 +5,8 @@ import { CircleSettings, ModesSlice, OneSlice } from "../@types/CircleSettings";
 export const useCircleSettings = create<CircleSettings>((set) => ({
     mode: 2,
     currentAngle: 0,
-    activeModalWinner: false,
-    activeModalModes: false,
+    isActiveModalWinner: false,
+    isActiveModalModes: false,
     winnerTitle: "",
     slices: [
         { title: "Pizza 🍕🍕🍕", color: "#F55D3E", id: v4() },
@@ -16,7 +16,7 @@ export const useCircleSettings = create<CircleSettings>((set) => ({
     changeMode: (newMode: ModesSlice) => set(() => ({ mode: newMode })),
     updateAllSlices: (newState: Array<OneSlice>) => set(() => ({ slices: newState })),
     updateAngle: (angle: number) => set(() => ({ currentAngle: angle })),
-    toggleOpenModalWinner: (boolean: boolean) => set(() => ({ activeModalWinner: boolean })),
-    toggleOpenModalModes: (boolean: boolean) => set(() => ({ activeModalModes: boolean })),
+    toggleOpenModalWinner: (boolean: boolean) => set(() => ({ isActiveModalWinner: boolean })),
+    toggleOpenModalModes: (boolean: boolean) => set(() => ({ isActiveModalModes: boolean })),
     setWinner: (title: string) => set(() => ({ winnerTitle: title })),
 }));

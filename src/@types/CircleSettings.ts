@@ -5,9 +5,9 @@ export interface CircleSettings {
     mode: ModesSlice;
     slices: Array<OneSlice>;
     currentAngle: number;
-    activeModalWinner: boolean;
+    isActiveModalWinner: boolean;
     winnerTitle: string;
-    activeModalModes: boolean;
+    isActiveModalModes: boolean;
     changeMode: (num: ModesSlice) => void;
     updateAllSlices: (state: Array<OneSlice>) => void;
     updateAngle: (num: number) => void;
