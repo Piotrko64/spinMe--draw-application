@@ -1,4 +1,4 @@
-# spinMe--draw-application
+# <p align="center"> [spinMe-draw-application](https://spinmeapp.vercel.app) </p>
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/188861912-fc3bd997-afb0-441b-b164-e4b0409e4241.png" height="200"/> </p>
 
 
@@ -35,7 +35,9 @@ learn other manage state library than redux - I choose Zustand!</p>
 <div align="center">
 <p>If you are undecided on what to eat for dinner or you have other small dilemmas, this application is for you</p>
 <p> I use HTML Canvas to create more interesting background! Visit this app and move mouse!</p>
+https://spinmeapp.vercel.app
 <br/>
+  <br/>
 <img src="https://user-images.githubusercontent.com/77500425/188863110-3403d65c-f81f-400b-a66c-62ba67c9f8a9.png"  align="center" />
 <br/>
 <br/>
