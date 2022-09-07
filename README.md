@@ -43,13 +43,20 @@ learn other manage state library than redux - I choose Zustand!</p>
 <br/>
 <img src="https://user-images.githubusercontent.com/77500425/188864436-a0215583-22e1-4055-b334-cb6be49134ea.png"  align="center" />
 <br/>
+<br/>
 I also love Vite to create quick base template in React-Typescript.
 </div>
+<br/>
+<br/>
 # Inspiration
 
 I wanted learn something other than redux toolkit to manage state. I also seldom use HTML Canvas so it was a good opportunity
 
 
+# What have I learned from this project
 
-
+- Zustand
+- I exercised HTML Canvas in react
+- Vite
+- I exercised also good folder structure
 
