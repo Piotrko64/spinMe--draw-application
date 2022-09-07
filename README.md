@@ -34,7 +34,7 @@ learn other manage state library than redux - I choose Zustand!</p>
 # About 
 <div align="center">
 <p>If you are undecided on what to eat for dinner or you have other small dilemmas, this application is for you</p>
-<p> I use HTML Canvas to create more interesting background! [Visit](https://spinmeapp.vercel.app)  this app and move mouse!</p>
+<p> I use HTML Canvas to create more interesting background! [this README](https://github.com/Piotrko64/react-sound-architecture/edit/master/README.md) and move mouse!</p>
 <br/>
 <img src="https://user-images.githubusercontent.com/77500425/188863110-3403d65c-f81f-400b-a66c-62ba67c9f8a9.png"  align="center" />
 <br/>
