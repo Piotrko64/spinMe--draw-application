@@ -36,7 +36,7 @@ export function ChoicesList() {
                                     )}
                                 </Draggable>
                             ))}
-                            {provided.placeholder}
+                            <>{provided.placeholder}</>
                         </div>
                     )}
                 </Droppable>
