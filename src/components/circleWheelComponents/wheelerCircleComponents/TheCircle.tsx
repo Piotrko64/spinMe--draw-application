@@ -32,7 +32,7 @@ export function TheCircle() {
                 className={classes.circle}
                 style={{ transform: `rotate(${-actualRotate}deg)` }}
                 onTransitionEnd={() => {
-                    toggleModalActive();
+                    toggleModalActive(true);
                     changeTitleWinner(correctArraySlices[findIndexRange].title);
                 }}
             >

@@ -16,7 +16,7 @@ export const useCircleSettings = create<CircleSettings>((set) => ({
     changeMode: (newMode: ModesSlice) => set(() => ({ mode: newMode })),
     updateAllSlices: (newState: Array<OneSlice>) => set(() => ({ slices: newState })),
     updateAngle: (angle: number) => set(() => ({ currentAngle: angle })),
-    toggleOpenModalWinner: () => set((state) => ({ activeModalWinner: !state.activeModalWinner })),
-    toggleOpenModalModes: () => set((state) => ({ activeModalModes: !state.activeModalModes })),
+    toggleOpenModalWinner: (boolean: boolean) => set(() => ({ activeModalWinner: boolean })),
+    toggleOpenModalModes: (boolean: boolean) => set(() => ({ activeModalModes: boolean })),
     setWinner: (title: string) => set(() => ({ winnerTitle: title })),
 }));

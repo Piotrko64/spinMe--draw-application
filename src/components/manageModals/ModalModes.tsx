@@ -25,7 +25,7 @@ export function ModalModes() {
                     />
                 ))}
             </div>
-            <BaseButton color={"#cdcdcd"} action={toggleActiveModalMode} title={"close"} />
+            <BaseButton color={"#cdcdcd"} action={() => toggleActiveModalMode(false)} title={"close"} />
         </BaseModal>
     );
 }

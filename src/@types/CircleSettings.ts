@@ -11,7 +11,7 @@ export interface CircleSettings {
     changeMode: (num: ModesSlice) => void;
     updateAllSlices: (state: Array<OneSlice>) => void;
     updateAngle: (num: number) => void;
-    toggleOpenModalWinner: () => void;
-    toggleOpenModalModes: () => void;
+    toggleOpenModalWinner: (bool: boolean) => void;
+    toggleOpenModalModes: (bool: boolean) => void;
     setWinner: (title: string) => void;
 }

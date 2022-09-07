@@ -18,13 +18,19 @@ export function ActionButtons() {
 
     function setRandomAngle() {
         const randomAngle = randomNumber(config.MIN_VALUE_SPIN, config.MAX_VALUE_SPIN);
+
         updateAngle(currentAngle + randomAngle);
     }
 
     return (
         <div className={classes.buttons}>
             <ButtonAction title="spin the wheel" color="#EB5C59" icon={circle} action={setRandomAngle} />
-            <ButtonAction title="change mode" color="#5C6EA1" icon={setting} action={toggleOpenModalMode} />
+            <ButtonAction
+                title="change mode"
+                color="#5C6EA1"
+                icon={setting}
+                action={() => toggleOpenModalMode(true)}
+            />
             <ButtonAction
                 title={listSlice.length >= config.MAX_AMOUNT_SLICE ? "Too much!" : "Add Choice"}
                 color="#C69E54"

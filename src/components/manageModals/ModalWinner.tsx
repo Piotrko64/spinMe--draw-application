@@ -10,7 +10,7 @@ export function ModalWinner() {
         <BaseModal>
             <h2>The Winner Is..</h2>
             <p>{titleWinner}</p>
-            <BaseButton color="#cdcdcd" title="close" action={toggleOpenModalWinner} />
+            <BaseButton color="#cdcdcd" title="close" action={() => toggleOpenModalWinner(false)} />
         </BaseModal>
     );
 }
