@@ -4,11 +4,10 @@ import { useFindSliceIndex } from "./useFindSlice";
 
 export function useChangeTextValueSlice(id: string) {
     const findIndex = useFindSliceIndex(id);
-    const updateAllSlices = useCircleSettings((state: CircleSettings) => state.updateAllSlices);
-    const listSlices = useCircleSettings((state: CircleSettings) => state.slices);
+    const { slices, updateAllSlices } = useCircleSettings((state: CircleSettings) => state);
 
     function changeValueText(textValue: string) {
-        const cloneSlices = [...listSlices];
+        const cloneSlices = [...slices];
 
         cloneSlices[findIndex].title = textValue;
 

@@ -4,11 +4,10 @@ import { useFindSliceIndex } from "./useFindSlice";
 
 export function useChangeColorSlice(id: string) {
     const findIndex = useFindSliceIndex(id);
-    const updateAllSlices = useCircleSettings((state: CircleSettings) => state.updateAllSlices);
-    const listSlices = useCircleSettings((state: CircleSettings) => state.slices);
+    const { slices, updateAllSlices } = useCircleSettings((state: CircleSettings) => state);
 
     function changeValueColor(newColor: string) {
-        const cloneSlices = [...listSlices];
+        const cloneSlices = [...slices];
 
         cloneSlices[findIndex].color = newColor;
 
