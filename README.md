@@ -61,3 +61,8 @@ I wanted learn something other than redux toolkit to manage state. I also seldom
 - Vite
 - I exercised also good folder structure
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/77500425/188866443-ed91eb9d-c694-41e7-974a-02c941671c84.png"  align="center" />
+<div>
+
+
