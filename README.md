@@ -8,8 +8,29 @@ learn other manage state library than redux - I choose Zustand!</p>
 
 
 <div align="center">
-
+<img src="https://user-images.githubusercontent.com/77500425/188862747-34d46b46-169f-4efe-b2d4-fc4265305c32.svg" alt="vite" height="50"  align="center" title="Vite" />
 <img src="https://user-images.githubusercontent.com/77500425/161312332-1842468e-46e2-4dc6-8996-4b4cc28bc4fd.png" alt="html5" height="50"  align="center" title="HTML" />
 <img src="https://user-images.githubusercontent.com/77500425/161311954-e03613e7-54b2-4d1b-ac2e-559f8c1e9f2d.png" alt="typescript" height="50"  align="center" title="TS"/>
 <img src="https://user-images.githubusercontent.com/77500425/161312615-f3961568-28bb-48fa-9d95-93ecd61337b3.png" alt="react"  height="50" align="center"/>
 <img src="https://user-images.githubusercontent.com/77500425/188861464-3b5357c0-67b4-4190-9b64-8ce18c5822e4.png" alt="Zustand"  height="50" align="center" title="Zustand is awesome!"/>
+
+<br />
+
+# Table of contents
+* [Instalation](#instalation)
+
+* [About project](#about)
+
+* [Inspiration](#inspiration)
+
+* [Major Updates](#Updates)
+
+* [What have I learned from this project](#what-have-i-learned-from-this-project)
+  
+  # Instalation
+- Download files by **git clone _repository-name_**
+- Use **npm i** or **yarn**
+- Use **npm run dev** or **yarn dev**
+
+# About 
+<img src="https://user-images.githubusercontent.com/77500425/188863110-3403d65c-f81f-400b-a66c-62ba67c9f8a9.png"  align="center" />
