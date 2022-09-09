@@ -12,7 +12,7 @@ export function useKeyboardToSpin() {
         isActiveModalWinner,
     } = useCircleSettings((state) => state);
 
-    function handlePressSpacebar(e: KeyboardEvent) {
+    function handlePressKey(e: KeyboardEvent) {
         if (e.key === "Enter") {
             e.preventDefault();
             toggleOpenModalModes(false);
@@ -26,7 +26,7 @@ export function useKeyboardToSpin() {
     }
 
     useEffect(() => {
-        window.addEventListener("keydown", handlePressSpacebar);
-        return () => window.removeEventListener("keydown", handlePressSpacebar);
+        window.addEventListener("keydown", handlePressKey);
+        return () => window.removeEventListener("keydown", handlePressKey);
     }, [currentAngle, isActiveModalModes, isActiveModalWinner]);
 }
