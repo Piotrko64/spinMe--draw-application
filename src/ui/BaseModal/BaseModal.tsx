@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChildrenProps } from "../../@types/ChildrenProps";
 import classes from "./baseModal.module.css";
+import FocusLock from "react-focus-lock";
 
 export function BaseModal({ children }: ChildrenProps) {
     return (
@@ -30,7 +31,7 @@ export function BaseModal({ children }: ChildrenProps) {
                     initial={{ scale: 0 }}
                     className={classes.modal}
                 >
-                    {children}
+                    <FocusLock>{children}</FocusLock>
                 </motion.div>
             </div>
         </>

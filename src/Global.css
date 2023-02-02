@@ -8,6 +8,6 @@ a {
 }
 * {
     font-family: "Lato", sans-serif;
-    outline-color: rgba(207, 173, 121, 0.233);
+    /* outline-color: rgba(207, 173, 121, 0.233); */
     text-align: center;
 }
